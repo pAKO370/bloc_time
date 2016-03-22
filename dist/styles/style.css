@@ -1,0 +1,39 @@
+
+.timer {
+	margin: auto;
+	width: 30%;
+	border: 1px solid black;
+	display: block;
+	padding: 2rem;
+}
+.time {
+	font-size: 5rem;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+.button {
+	display: block;
+	padding: 1rem 2rem;
+	margin: 2.5rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+	border-radius: .5rem;
+	text-decoration: none;
+	-webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.start {
+	background-color: dimgray;
+}
+.reset {
+	background-color: dimgray;
+}
+.start:hover {
+    background-color: #00cc00; /* Green */
+    color: white;
+}
+.reset:hover {
+    background-color: #ff3333; /* red*/
+    color: white;
+}

@@ -9,7 +9,9 @@
 		$stateProvider
 			.state('timer', {
 			url: '/',
-			templateUrl: '/templates/timer.html'
+			templateUrl: '/templates/timer.html',
+			controller: 'TimerCtrl as timer'
+			
 		});
 		
 	}

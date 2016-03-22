@@ -1,6 +1,8 @@
 <div class="container">
 	<div class="timer">
-		<h1>25:00</h1>
-		<button type="button">Start!</button>
+		<h1>{{timer.timerDuration}}</h1>
+		<button class="button start"type="button" ng-click="startTimer()">Start!</button>
+		<button class="button reset" type="button" ng-show="timerRunning"
+		ng-click="resetTimer()">Reset</button>
 	</div>
 </div>
