@@ -1,8 +1,6 @@
 (function() {
-	function HomeCtrl(){
-		this.timerDuration = 25;
+	function HomeCtrl(){	
 		
-	
 	}
 	angular
 		.module('blocTime')
