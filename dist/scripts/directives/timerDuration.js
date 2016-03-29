@@ -15,20 +15,27 @@
 			
 			$scope.isRunning = false;
 			$scope.onBreak = false;
-			
-			$scope.startTimer = function(){
+			$scope.workSessions = 0;
 				
-					$scope.isRunning = true;
+			$scope.startTimer = function() {
 					
 				
+					$scope.isRunning = true;
 					$scope.timer = $interval(function(){
+						console.log($scope.workSessions);
 						$scope.count = $scope.count -1;
 							if ($scope.count == 0){
 								$scope.resetTimer();
 								$scope.count = 5;
 								$scope.onBreak = true;
+								$scope.workSessions ++;
+								if ($scope.workSessions == 5){
+									$scope.workSessions = 0;
+								}
+								
 							}
-						},500);
+						},100);
+				
 			};
 			
 			$scope.breakTime = function(){
@@ -40,8 +47,13 @@
 								$scope.resetTimer();
 								$scope.count = 25;
 								$scope.onBreak = false;
+								
+								if ($scope.workSessions == 4) {
+									$scope.count = 30;
+									
+								}
 							}
-						},500);
+						},100);
 			}	
 			
 				
