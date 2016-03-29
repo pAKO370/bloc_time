@@ -8,7 +8,7 @@
 			//require: 'TimerCtrl',
 			link: function($scope,element,attributes, controller) {
 		
-				$scope.count = 25;	
+				$scope.count = 1500;	
 			//$scope.startTimer = $interval(function(){
 				//$scope.count = $scope.count -1;
 			//},100);
@@ -26,7 +26,7 @@
 						$scope.count = $scope.count -1;
 							if ($scope.count == 0){
 								$scope.resetTimer();
-								$scope.count = 5;
+								$scope.count = 300;
 								$scope.onBreak = true;
 								$scope.workSessions ++;
 								if ($scope.workSessions == 5){
@@ -34,7 +34,7 @@
 								}
 								
 							}
-						},100);
+						},10);
 				
 			};
 			
@@ -45,7 +45,7 @@
 						$scope.count = $scope.count -1;
 							if ($scope.count == 0){
 								$scope.resetTimer();
-								$scope.count = 25;
+								$scope.count = 1500;
 								$scope.onBreak = false;
 								
 								if ($scope.workSessions == 4) {
@@ -53,7 +53,7 @@
 									
 								}
 							}
-						},100);
+						},10);
 			}	
 			
 				
