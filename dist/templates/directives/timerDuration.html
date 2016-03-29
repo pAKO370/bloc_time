@@ -1,5 +1,6 @@
 <div class="timer">
 	<h1 class="time">{{count}}</h1>
-	<a ng-click="startTimer()"><button ng-hide="isRunning" class="button start"type="button">Start!</button></a>
+	<a ng-click="startTimer()"><button ng-hide="isRunning || onBreak" class="button start"type="button">Start!</button></a>
 	<a ng-click="resetTimer()"><button  ng-show="isRunning"  class="button reset" type="button">Reset</button></a>
+	<a ng-click="breakTime()"><button ng-hide="!onBreak || isRunning" class="button start"type="button">Take a Break!</button></a>
 </div>
