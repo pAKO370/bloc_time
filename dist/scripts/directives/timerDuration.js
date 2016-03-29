@@ -8,10 +8,11 @@
 			//require: 'TimerCtrl',
 			link: function($scope,element,attributes, controller) {
 		
-				$scope.count = 1500;	
-			//$scope.startTimer = $interval(function(){
-				//$scope.count = $scope.count -1;
-			//},100);
+				$scope.count = 1500;
+				
+				var ding = new buzz.sound("/assets/audio/Elevator.mp3", {
+					preload: true
+				});
 			
 			$scope.isRunning = false;
 			$scope.onBreak = false;
@@ -25,6 +26,7 @@
 						console.log($scope.workSessions);
 						$scope.count = $scope.count -1;
 							if ($scope.count == 0){
+						
 								$scope.resetTimer();
 								$scope.count = 300;
 								$scope.onBreak = true;
@@ -44,6 +46,7 @@
 				$scope.timer = $interval(function(){
 						$scope.count = $scope.count -1;
 							if ($scope.count == 0){
+							
 								$scope.resetTimer();
 								$scope.count = 1500;
 								$scope.onBreak = false;
@@ -62,9 +65,15 @@
 				$scope.isRunning = false;
 				$scope.onBreak = false;
 				$interval.cancel($scope.timer);
-				$scope.count = 25;
+				$scope.count = 1500;
 			
 			}
+			$scope.$watch('count', function(newVal, oldVal){
+				
+				if (newVal == 1) {
+					ding.play();
+				}
+			});	
 		}
 	}
 }
