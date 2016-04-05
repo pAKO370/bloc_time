@@ -68,7 +68,7 @@
 				$scope.count = 1500;
 			
 			}
-			$scope.$watch('count', function(newVal, oldVal){
+			$scope.$watch('count', function(newVal){
 				
 				if (newVal == 1) {
 					ding.play();

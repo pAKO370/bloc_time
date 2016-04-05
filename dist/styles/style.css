@@ -1,11 +1,34 @@
-
+body,
+html{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+h1,
+h2{
+	font-family: 'Open Sans', sans-serif;
+	
+}
+.task-h2 {
+	margin: 2px 0px;
+}
+.container {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	background-color: aquamarine;
+}
 .timer {
+	position: absolute;
+	top: 40px;
+	left: 450px;
 	margin: auto;
 	width: 30%;
 	border: 1px solid black;
 	display: block;
 	padding: 2rem;
 	text-align: center;
+	float: right;
 }
 .time {
 	font-size: 5rem;
@@ -18,6 +41,7 @@
 	margin: 0 auto;
 	font-size: 1.5rem;
 	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
 	border-radius: .5rem;
 	text-decoration: none;
 	-webkit-transition-duration: 0.4s; /* Safari */
@@ -35,6 +59,65 @@
     color: white;
 }
 .reset:hover {
+    background-color: #ff3333; /* red*/
+    color: white;
+}
+.container .left-tasks{
+	background-color: gray;
+	min-height: 100%;
+	width: 400px;
+	padding-top: 20px;
+	overflow: auto;
+	
+}
+.input-area {
+	padding-left: 15px;
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	width: 75%;
+	word-wrap: break-word;
+	
+}
+input {
+	padding: 10px;
+	border-radius: 4px;
+}
+.task-button {
+	font-family: 'Open Sans', sans-serif;
+	padding: 0px;
+	font-size: 15px;
+	height: 35px;
+	width: 75px;
+	margin-left: 10px;
+}
+.task-list {
+	position: relative;
+	width: 100%;
+	padding-top: 2.5px;
+	padding-bottom: 2.5px;
+	margin: 10px 0;
+	padding-left: 20px;
+	background-color: lightgray;
+}
+.btn-delete { 
+	position: absolute;
+	margin: 0 auto;
+	font-size: .5rem;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	border-radius: .5rem;
+	text-decoration: none;
+	top: 0;
+	right: 7%;
+	margin-top: 1.5px;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #ff3333;
+	
+}
+.btn-delete:hover {
     background-color: #ff3333; /* red*/
     color: white;
 }
