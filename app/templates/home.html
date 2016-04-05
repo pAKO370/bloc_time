@@ -1,5 +1,8 @@
 
-<div class="container">
+<div class="container clearfix">
+	<div class="right-div">
+		<timer-duration></timer-duration>
+	</div>
 	<div class="left-tasks">
 			<div class="input-area">
 			<h2 class="task-h2">Task History</h2>
@@ -7,9 +10,10 @@
 				<input type="text" ng-model="home.task.name">
 				<button class="task-button" ng-click="home.addTask()">Add Task</button>
 			</div>
-			<div class="task-list" ng-repeat="(id, task) in home.tasks"><p>{{task.name}}</p>
+			<div class="task-list" ng-repeat="task in home.tasks | orderBy: 'create_at':true">
+			<p>{{task.name}}</p>
 			<button class='btn-delete' ng-click="home.tasks.$remove(task)">Delete</button>
 			</div>
 		</div>
-		<timer-duration></timer-duration>
+		
 </div>
