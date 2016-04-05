@@ -4,14 +4,13 @@ html{
 	margin: 0;
 	height: 100%;
 }
+
 h1,
 h2{
 	font-family: 'Open Sans', sans-serif;
 	
 }
-.task-h2 {
-	margin: 2px 0px 15px 0px;
-}
+/*------ contatiner for the task and timer divs  ------*/
 .container {
 	position: relative;
 	width: 100%;
@@ -19,17 +18,24 @@ h2{
 	background: url('https://i.ytimg.com/vi/nSISUDNGdZo/maxresdefault.jpg');
 	background: linear-gradient(135deg,rgba(0,0,0,0.5), black);
 }
+
+.task-h2 {
+	margin: 2px 0px 15px 0px;
+}
+/*------ contatiner for the timer div  ------*/
 .timer {
 	margin: auto;
 	padding: 2rem;
 	text-align: center;
 	color: white;
 }
+/*------ 25:00 timer  ------*/
 .time {
 	font-size: 5rem;
 	margin: auto;
 	font-family: 'Open Sans', sans-serif;
 }
+
 .button {
 	display: block;
 	padding: 1rem 2rem;
@@ -57,6 +63,7 @@ h2{
     background-color: #ff3333; /* red*/
     color: white;
 }
+/*------ div for task  ------*/
 .left-tasks{
 	background-color: gray;
 	min-height: 100%;
@@ -79,9 +86,10 @@ p {
 }
 input {
 	padding: 10px;
+	width: 250px;
 	border-radius: 4px;
 }
-.task-button {
+.task-button { /*--- button to add tasks---*/
 	font-family: 'Open Sans', sans-serif;
 	padding: 0px;
 	font-size: 15px;
@@ -127,6 +135,7 @@ input {
 	display: table;
 	clear: both;
 }
+
 @media(max-width: 700px){
 	
 	.right-div {
