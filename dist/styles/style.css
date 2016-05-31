@@ -12,139 +12,128 @@ h2{
 }
 /*------ contatiner for the task and timer divs  ------*/
 .container {
-	position: relative;
+	background: url(../assets/images/Time-management.jpg);
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 100vh;
 	width: 100%;
-	min-height: 100%;
-	background: url('https://i.ytimg.com/vi/nSISUDNGdZo/maxresdefault.jpg');
-	background: linear-gradient(135deg,rgba(0,0,0,0.5), black);
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
-
-.task-h2 {
-	margin: 2px 0px 15px 0px;
-}
-/*------ contatiner for the timer div  ------*/
 .timer {
-	margin: auto;
-	padding: 2rem;
-	text-align: center;
-	color: white;
-}
-/*------ 25:00 timer  ------*/
-.time {
-	font-size: 5rem;
-	margin: auto;
-	font-family: 'Open Sans', sans-serif;
-}
-
-.button {
-	display: block;
-	padding: 1rem 2rem;
-	margin: 0 auto;
-	font-size: 1.5rem;
-	font-weight: bold;
-	font-family: 'Open Sans', sans-serif;
-	border-radius: .5rem;
-	text-decoration: none;
-	-webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-
-.start {
-	background-color: dimgray;
-}
-.reset {
-	background-color: dimgray;
-}
-.start:hover {
-    background-color: #00cc00; /* Green */
-    color: white;
-}
-.reset:hover {
-    background-color: #ff3333; /* red*/
-    color: white;
-}
-/*------ div for task  ------*/
-.left-tasks{
-	background-color: gray;
-	min-height: 100%;
-	width: 60%;
-	padding-top: 20px;
-	overflow: auto;
-	float: left;
-	
-}
-.input-area {
-	padding-left: 15px;
-	margin-bottom: 40px;
-}
-p {
-	font-family: 'Open Sans', sans-serif;
 	margin: 0;
-	width: 75%;
-	word-wrap: break-word;
-	
+	font-size: 5rem;
+	height: 300px;
+	position: relative;
 }
-input {
-	padding: 10px;
-	width: 250px;
-	border-radius: 4px;
+.timer h1 {
+	margin: 0px;
+	text-shadow: 6px 6px 10px gray;
 }
-.task-button { /*--- button to add tasks---*/
-	font-family: 'Open Sans', sans-serif;
-	padding: 0px;
-	font-size: 15px;
-	height: 35px;
-	width: 75px;
-	margin-left: 10px;
+.timer-div {
+	background: rgba(255,255,255,.8);
+	box-shadow: 5px 5px 10px rgba(255,255,255,.8);
+}
+.left-tasks {
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+	border: 1px solid black;
+	width: 400px;
+	padding: 1rem;
+	box-shadow: 3px 3px 50px black;
+	background: rgba(255,255,255,.8);
+}
+.timer button {
+	position: absolute;
+	left: 35%;
+	width: 100px;
+	height: 40px;
+	margin: 0 auto;
+	background-color: lawngreen;
+	font-size: 1.7rem;
+	border-radius: 5px;
+	outline: none;
+	-webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+.timer button:hover {
+	-webkit-transform: scale(1.0);
+	transform: scale(1.);
+	box-shadow: 5px 5px 20px black;
+}
+button.reset {
+	background-color: red;
+}
+
+.task-h2{
+	font-size: 2rem;
+}
+.left-tasks input {
+	width: 60%;
+	height: 30px;
+	border-radius: 3px;
+	border: 2px solid gray;
+	margin-right: 10px;
+	font-size: 1.3rem;
+}
+.left-tasks .task-button {
+	width: 20%;
+	border-radius: 3px;
+	margin-left: 20px;
+	outline: none;
+	font-size: 1rem;
+	padding: .2rem;
 }
 .task-list {
-	position: relative;
-	width: 100%;
-	padding-top: 2.5px;
-	padding-bottom: 2.5px;
-	margin: 10px 0;
-	padding-left: 20px;
-	background-color: lightgray;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	padding: 15px;
+	margin-top: 30px;
 }
-.btn-delete { 
-	position: absolute;
-	margin: 0 auto;
-	font-size: .5rem;
-	font-weight: bold;
-	font-family: 'Open Sans', sans-serif;
-	border-radius: .5rem;
-	text-decoration: none;
-	top: 0;
-	right: 7%;
-	margin-top: 1.5px;
-	display: inline-block;
-	font-family: 'Open Sans', sans-serif;
-	background-color: #ff3333;
+h5 {
+	height: 30px;
+	width: 60%;
+	font-size: 25px;
+	margin: 0px;
+	text-transform: capitalize;
 	
 }
-.btn-delete:hover {
-    background-color: #ff3333; /* red*/
-    color: white;
-}
-.right-div {
-	width: 38%;
-	float: right;
-}
-.clearfix {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-@media(max-width: 700px){
-	
-	.right-div {
-		float: none;
-		width: 100%;
-	}
-	.left-tasks {
-		float: none;
-		width: 100%;
-	}
-	
+.btn-delete {
+	width: 20%;
+	height: 25px;
+	border-radius: 3px;
+	margin-left: 20px;
+	outline: none;
+	font-size: 1rem;
+	padding: .2rem;
+	margin-top: 3px;
+	background-color: red;
 }

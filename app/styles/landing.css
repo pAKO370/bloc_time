@@ -1,0 +1,128 @@
+.main-contain {
+	background: url(../assets/images/time-wallpaper-2.jpg);
+	height: 100vh;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	font-family: 'Arvo', serif;
+}
+.main-section{
+	width: 95%;
+	background: pink;
+	margin-left: 5px;
+}
+.main-section h1 {
+	font-size: 2rem;
+	color: aliceblue;
+	background: black;
+	padding: .5rem 1rem;
+	text-transform: uppercase;
+	margin: 0.1rem;
+	display: inline-block;
+	font-family: 'Candal', sans-serif;
+}
+.click-here h1{
+	font-size: .9rem;
+	padding: 0.2rem 2rem 0.2rem 0.2rem;
+	background: white;
+	color: black;
+}
+.ion-chevron-right{
+	position: relative;
+	color: black;
+	font-size: .9rem;
+	display: inline-block;
+	top: 1.5px;
+	margin-left: -25px;
+}
+@media (min-width: 370px) {
+	.main-section{ 
+		margin-left: 60px;	
+	}
+	.main-section h1 {
+	font-size: 2.2rem;
+	padding: .5rem 1rem;
+	margin: 0.1rem;
+}
+.click-here h1{
+	font-size: 1rem;
+	padding: 0.2rem 2rem 0.2rem 0.2rem;
+}
+.ion-chevron-right{
+	font-size: 1rem;
+	display: inline-block;
+	top: 1.5px;
+	margin-left: -25px;
+}
+@media (min-width: 430px) {
+		.main-contain {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-align: end;
+			-webkit-align-items: flex-end;
+			-ms-flex-align: end;
+			-ms-grid-row-align: flex-end;
+			align-items: flex-end;
+		}
+		.main-section{
+			position: relative;
+			width: auto;
+			margin-right: 3%;
+			right: 10px;
+		}
+		.main-section h1 {
+			font-size: 2.5rem;
+			padding: .5rem 1rem;
+			margin: 0.2rem;
+		}
+		.click-here h1{
+			font-size: 1.3rem;
+			padding: 0.2rem 2rem 0.2rem 0.2rem;
+		}
+		.ion-chevron-right{
+			font-size: 1.3rem;
+			display: inline-block;
+			top: 1.5px;
+			margin-left: -35px;
+		}
+	}
+	@media (min-width: 550px) {
+		.main-section h1 {
+			font-size: 4rem;
+			padding: .5rem 1rem;
+			margin: 0.2rem;
+		}
+		.click-here h1{
+			font-size: 2.2rem;
+			padding: 0.2rem 3rem 0.2rem 0.2rem;
+		}
+		.ion-chevron-right{
+			font-size: 2.2rem;
+			display: inline-block;
+			top: 1.5px;
+			margin-left: -35px;
+			-webkit-transition: all 1s ease-in-out;
+			-webkit-transition: all .7s ease-in-out;
+			transition: all .7s ease-in-out;
+		}
+		.click-here:hover .ion-chevron-right {
+			margin-left: -25px; 
+		}
+	}
+}

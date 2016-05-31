@@ -1,19 +1,16 @@
 
-<div class="container clearfix">
-	<div class="right-div">
+<div class="container">
+	<div class="timer-div">
 		<timer-duration></timer-duration>
-	</div>
+	
 	<div class="left-tasks">
-			<div class="input-area">
-			<h2 class="task-h2">Task History</h2>
-				<!-- <h1>{{home.task}}</h1> -->
-				<input type="text" ng-model="home.task.name">
-				<button class="task-button" ng-click="home.addTask()">Add Task</button>
-			</div>
-			<div class="task-list" ng-repeat="task in home.tasks | orderBy: 'create_at':true">
-			<p>{{task.name}}</p>
+			<h2 class="task-h2">Tasks</h2>
+	<!-- <h1>{{home.task}}</h1> -->
+			<input type="text" ng-model="home.task.name">
+			<button class="task-button" ng-click="home.addTask()">Add Task</button>
+		<div class="task-list" ng-repeat="task in home.tasks | orderBy: 'create_at':true">
+			<h5>{{task.name}}</h5>
 			<button class='btn-delete' ng-click="home.tasks.$remove(task)">Delete</button>
-			</div>
 		</div>
-		
+		</div>
 </div>

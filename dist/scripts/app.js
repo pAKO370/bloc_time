@@ -7,8 +7,12 @@
 		});
 		
 		$stateProvider
-			.state('home', {
+			.state('landing', {
 			url: '/',
+			templateUrl: '/templates/landing.html'
+		})
+			.state('home', {
+			url: '/home',
 			templateUrl: '/templates/home.html',
 			controller: 'HomeCtrl as home'
 			
