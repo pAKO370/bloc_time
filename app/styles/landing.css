@@ -22,6 +22,7 @@
 .main-section{
 	width: 95%;
 	margin-left: 5px;
+	margin-bottom: 2px;
 }
 .main-section h1 {
 	font-size: 2rem;
@@ -29,7 +30,7 @@
 	background: black;
 	padding: .5rem 1rem;
 	text-transform: uppercase;
-	margin: 0.1rem;
+	margin: 1px;
 	display: inline-block;
 	font-family: 'Candal', sans-serif;
 }
@@ -38,6 +39,19 @@
 	padding: 0.2rem 2rem 0.2rem 0.2rem;
 	background: white;
 	color: black;
+}
+.click-here h4{
+	font-size: 1rem;
+	padding: 0.2rem 2rem 0.2rem 0.2rem;
+	background: white;
+	color: black;
+	font-family: 'Candal', sans-serif;
+	background-color: gray;
+	margin: 4px;
+}
+.gray {
+	width: 90%;
+	margin: 0px 0px;
 }
 .ion-chevron-right{
 	position: relative;
@@ -102,6 +116,20 @@
 		}
 	}
 	@media (min-width: 550px) {
+		.click-here h4{
+	font-size: 1.5rem;
+	padding: 0.2rem 2rem 0.2rem 0.2rem;
+	background: white;
+	color: black;
+	font-family: 'Candal', sans-serif;
+	background-color: gray;
+	margin: 4px;
+}
+.gray {
+	width: 90%;
+	max-width: 700px;
+	margin: 0px 0px;
+}
 		.main-section h1 {
 			font-size: 4rem;
 			padding: .5rem 1rem;
