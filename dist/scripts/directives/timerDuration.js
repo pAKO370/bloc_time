@@ -17,16 +17,26 @@
 			$scope.isRunning = false;
 			$scope.onBreak = false;
 			$scope.workSessions = 0;
+			$scope.counter = 0;
 				
 			$scope.startTimer = function() {
 					var test = document.getElementById('cont1');
-					console.log(test);
-					
+					//console.log(test);
+					console.log(test.style.background);
 				
 					console.log($scope.workSessions);
 					$scope.isRunning = true;
 					$scope.timer = $interval(function(){
 						$scope.count = $scope.count -1;
+						$scope.counter += 1;
+						/*if($scope.counter == 60){
+							console.log('reset');
+							document.getElementById('cont1').style.background = 'red';
+							document.getElementById('cont2').style.background = 'red';
+							document.getElementById('wrapper').style.background = 'white';
+							
+						} */
+						console.log($scope.counter);
 							if ($scope.count == 0){
 								$scope.resetTimer();
 								$scope.count = 300;
@@ -55,7 +65,7 @@
 								$scope.onBreak = false;
 								
 								if ($scope.workSessions == 4) {
-									$scope.count = 30;
+									$scope.count = 1800;
 									
 								}
 							}
@@ -71,6 +81,8 @@
 				$scope.count = 1500;
 				document.getElementById('cont1').style.animation = ('rotate-bg-1 60s 0 linear');
 				document.getElementById('cont2').style.animation = ('rotate-bg-2 60s 0 linear');
+				document.getElementById('cont1').style.animation = '';
+				document.getElementById('cont2').style.animation = '';
 			
 			}
 			$scope.$watch('count', function(newVal){

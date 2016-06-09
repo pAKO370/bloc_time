@@ -4,7 +4,7 @@
 	<a ng-click="resetTimer()"><button  ng-show="isRunning"  class="reset" type="button">Reset</button></a>
 	<a ng-click="breakTime()"><button ng-hide="!onBreak || isRunning" class="button start"type="button">Take a Break!</button></a>
 </div> -->
-<div class="wrapper">
+<div class="wrapper" id="wrapper">
 <div class="timer">
 	<h1 class="time">{{count | timerFilter}}</h1>
 	<a ng-click="startTimer()"><button ng-hide="isRunning || onBreak" class="button start"type="button">Start!</button></a>
@@ -12,9 +12,9 @@
 	<a ng-click="breakTime()"><button ng-hide="!onBreak || isRunning" class="button start"type="button">Take a Break!</button></a>
 </div>
 	<div class='dial-container container1' >
-		<div class="wedge one" id="cont1"></div>
+		<div class="wedge" id="cont1" id="one"></div>
 	</div>
 	<div class="dial-container container2">
-		<div class="wedge two" id='cont2'></div>
+		<div class="wedge one" id='cont2'></div>
 	</div>
 </div>
