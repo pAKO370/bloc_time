@@ -19,14 +19,15 @@
 			$scope.workSessions = 0;
 				
 			$scope.startTimer = function() {
+					var test = document.getElementById('cont1');
+					console.log(test);
 					
 				
+					console.log($scope.workSessions);
 					$scope.isRunning = true;
 					$scope.timer = $interval(function(){
-						console.log($scope.workSessions);
 						$scope.count = $scope.count -1;
 							if ($scope.count == 0){
-						
 								$scope.resetTimer();
 								$scope.count = 300;
 								$scope.onBreak = true;
@@ -37,16 +38,18 @@
 								
 							}
 						},1000);
-				
+						document.getElementById('cont1').style.animation = ('rotate-bg-1 60s infinite linear');
+						document.getElementById('cont2').style.animation = ('rotate-bg-2 60s infinite linear');
+						
 			};
 			
 			$scope.breakTime = function(){
 				$scope.isRunning = true;
-				
+				document.getElementById('cont1').style.animation = ('rotate-bg-1 60s infinite linear');
+				document.getElementById('cont2').style.animation = ('rotate-bg-2 60s infinite linear');
 				$scope.timer = $interval(function(){
 						$scope.count = $scope.count -1;
 							if ($scope.count == 0){
-							
 								$scope.resetTimer();
 								$scope.count = 1500;
 								$scope.onBreak = false;
@@ -66,6 +69,8 @@
 				$scope.onBreak = false;
 				$interval.cancel($scope.timer);
 				$scope.count = 1500;
+				document.getElementById('cont1').style.animation = ('rotate-bg-1 60s 0 linear');
+				document.getElementById('cont2').style.animation = ('rotate-bg-2 60s 0 linear');
 			
 			}
 			$scope.$watch('count', function(newVal){

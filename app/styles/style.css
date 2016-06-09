@@ -3,6 +3,7 @@ html{
 	padding: 0;
 	margin: 0;
 	height: 100%;
+	background: lightgray;
 }
 
 h1,
@@ -12,7 +13,8 @@ h2{
 }
 /*------ contatiner for the task and timer divs  ------*/
 .container {
-	background: url(../assets/images/Time-management.jpg);
+	/* url(../assets/images/Time-management.jpg) */
+	background: url(../assets/images/time-wallpaper-2.jpg);
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -37,11 +39,17 @@ h2{
 	margin: 0;
 	font-size: 5rem;
 	height: 300px;
-	position: relative;
+	position: absolute;
+	z-index: 10000;
+	top: 11rem;
+	left: 16%;
 }
 .timer h1 {
 	margin: 0px;
 	text-shadow: 6px 6px 10px gray;
+	color: white;
+	min-width: 410px;
+	text-align: center;
 }
 .timer-div {
 	background: rgba(255,255,255,.8);
@@ -57,24 +65,28 @@ h2{
 	padding: 1rem;
 	box-shadow: 3px 3px 50px black;
 	background: rgba(255,255,255,.8);
+	position: absolute;
+	top: 75%;
+	left: calc(50% - 200px);
 }
 .timer button {
 	position: absolute;
-	left: 35%;
-	width: 100px;
+	left: 115px;
+	width: 200px;
 	height: 40px;
 	margin: 0 auto;
 	background-color: lawngreen;
 	font-size: 1.7rem;
 	border-radius: 5px;
 	outline: none;
+	box-shadow: 0px 0px 20px gray;
 	-webkit-transition: all .2s ease-in;
 	transition: all .2s ease-in;
 }
 .timer button:hover {
-	-webkit-transform: scale(1.0);
-	transform: scale(1.);
-	box-shadow: 5px 5px 20px black;
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	box-shadow: 1px 1px 20px gray;
 }
 button.reset {
 	background-color: red;
@@ -136,4 +148,144 @@ h5 {
 	padding: .2rem;
 	margin-top: 3px;
 	background-color: red;
+}
+
+body {
+	background: black;
+}
+.wrapper {
+	position: absolute;
+	width: 4em;
+	height: 4em;
+	left: calc(50% - 2.1em);
+	top: 1rem;
+	font-size: 150px;
+	border-radius: 50% 50%;
+	background: linear-gradient(rgba(25,25,112,.8),20%,blue,55%, green,lawngreen);
+	border: 5px solid black;
+}
+.wrapper::after {
+	content: '';
+	background: black;
+	border-radius: 50%;
+	width: 3.5em;
+	height: 3.5em;
+	position: absolute;
+	top: .25em;
+	left: .25em;
+}
+.dial-container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	width: 2em;
+}
+.wedge{
+	width: 2em;
+	height: 4em;
+}
+.one {
+	background: white;
+}
+.two{
+	background: white;
+}
+.container1{
+	left: 2em;
+}
+.container1 .wedge {
+	
+	border-radius: 0 4em 4em 0;
+	left: 0;
+	transform-origin: 0 50%;
+	
+}
+.container2 {
+	left: 0;
+}
+.container2 .wedge {
+	
+	border-radius: 4em 0 0 4em;
+	transform-origin: 2em 2em;
+}
+
+@keyframes rotate-bg-1 {
+	50%, 100% {
+		transform: rotateZ(180deg);
+	}
+}
+@keyframes rotate-bg-2 {
+	0%, 50% {
+		transform: rotateZ(0);
+	}
+	100% {
+		transform: rotateZ(180deg);
+	}
+}
+@media(max-width: 500px){
+	.wrapper {
+		font-size: 50px;
+	}
+	.timer {
+		font-size: 1rem;
+		height: 300px;
+		top: 4rem;
+		left: 0px;
+	}
+	.timer h1 {
+		min-width: 210px;
+		text-align: center;
+		margin-left: -4px;
+		margin-bottom: 5px;
+	}
+	.timer button {
+		
+		left: 50px;
+		width: 100px;
+		height: 40px;
+		font-size: 1.rem;
+	}
+	.left-tasks {
+		width: 90%;
+		top: 45%;
+		left: 1%;
+		align-self: center;
+		display: inline-block;
+		margin: 0 auto;
+	}
+	.task-h2{
+	font-size: 2rem;
+}
+	.left-tasks input {
+		width: 70%;
+		height: 30px;
+		border-radius: 3px;
+		border: 2px solid gray;
+		margin-right: 1px;
+		font-size: .9rem;
+	}
+	.left-tasks .task-button {
+		width: 25%;
+		border-radius: 3px;
+		margin-left: 0px;
+		outline: none;
+		font-size: .7rem;
+		padding: .2rem;
+		font-weight: 800;
+	}
+	.task-list {
+		padding: 5px;
+		margin-top: 5px;
+	}
+	h5 {
+		font-size: 15px;
+
+	}
+	.btn-delete {
+		font-size: .8rem;
+		font-weight: 800;
+		border-radius: 7px;
+		outline: none;
+	}
 }
