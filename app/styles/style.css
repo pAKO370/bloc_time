@@ -19,7 +19,7 @@ h2{
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	height: 100vh;
+	height: 120vh;
 	width: 100%;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
@@ -62,12 +62,13 @@ h2{
 	order: 1;
 	border: 1px solid black;
 	width: 400px;
-	padding: 1rem;
+	padding: 10px;
 	box-shadow: 3px 3px 50px black;
 	background: rgba(255,255,255,.8);
 	position: absolute;
 	top: 75%;
-	left: calc(50% - 200px);
+	left: calc(50% - 222px);
+	margin-bottom: 20px;
 }
 .timer button {
 	position: absolute;
